@@ -8,6 +8,6 @@ time.sleep(10)
 
 current_time = datetime.datetime.now()
 
-print((current_time - start_time).total_seconds())
+logging.info((current_time - start_time).total_seconds())
 
 
