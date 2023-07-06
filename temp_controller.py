@@ -17,8 +17,6 @@ def get_temp():
             return((response['result'][0]['value']/10)*1.8+32)
             break
 
-get_temp()
-
     # response = openapi.get("/v1.0/iot-03/devices/{}/status".format(DEVICE_ID))
     # for stat in response['result']:
     #     if response['result'][0]['code'] == 'va_temperature':
