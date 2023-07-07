@@ -14,7 +14,7 @@ def main():
             print("New temp | checking if action needed...")
             current_temp = new_temp
             temp_check.fan_check(current_temp)
-        time.sleep(120)
+        time.sleep(10)
 
 main()
 
