@@ -8,8 +8,8 @@ def heater_control(toggle):
     time.sleep(10)
     stdout, stderr = process.communicate()
     # Print the output
-    logging.info("Heater Status: ")
-    logging.info(stdout.decode())
+    print("Heater Status: ")
+    print(stdout.decode())
 
 def fan_control(toggle):
     command = "kasa --host 192.168.1.80 " + toggle +" --name \"40g Cooling fans\""
@@ -17,8 +17,8 @@ def fan_control(toggle):
     time.sleep(10)
     stdout, stderr = process.communicate()
     # Print the output
-    logging.info("Fan Status: ")
-    logging.info(stdout.decode())
+    print("Fan Status: ")
+    print(stdout.decode())
 
 # import asyncio
 # import kasa
@@ -28,7 +28,7 @@ def fan_control(toggle):
     # await p.update()    # Request the update
     # plugs = p.sys_info  # all info on strip
     # plugs = p.children
-    # pprint.plogging.info(plugs)
+    # pprint.pprint(plugs)
     # for plug in plugs['children']:
     #     if plug['alias'] == "40g Cooling fans":
     #         plug.turn_on()

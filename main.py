@@ -9,9 +9,9 @@ def main():
     current_temp = 0
     while True:
         new_temp = temp_controller.get_temp()
-        logging.info("Temp: ", new_temp, "F -- ", datetime.datetime.now())
+        print("Temp: ", new_temp, "F -- ", datetime.datetime.now())
         if new_temp != current_temp:
-            logging.info("New temp | checking if action needed...")
+            print("New temp | checking if action needed...")
             current_temp = new_temp
             temp_check.fan_check(current_temp)
         time.sleep(120)

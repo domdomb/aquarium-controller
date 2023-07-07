@@ -23,7 +23,7 @@ def get_temp():
     #         new_temp = (response['result'][0]['value']/10)*1.8+32
     #         if new_temp != current_temp:
     #             beep(4)
-    #             logging.info((response['result'][0]['value']/10)*1.8+32)
+    #             print((response['result'][0]['value']/10)*1.8+32)
     #             current_temp = (response['result'][0]['value']/10)*1.8+32
     #         break
 
