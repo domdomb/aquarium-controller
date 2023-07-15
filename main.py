@@ -1,20 +1,16 @@
-import temp_controller
-import temp_check
-import kasa_controller
-import time
+import aquarium_manager
 import datetime
-import logging
+import time
 
-def main():
-    current_temp = 0
+def __main__():
+    my_tank = aquarium_manager.AquariumManager()
     while True:
-        new_temp = temp_controller.get_temp()
-        print("Temp: ", new_temp, "F -- ", datetime.datetime.now())
-        if new_temp != current_temp:
+        my_tank.new_temp = my_tank.get_temp()
+        print("Temp: ", my_tank.new_temp, "F -- ", datetime.datetime.now())
+        if my_tank.new_temp != my_tank.current_temp:
             print("New temp | checking if action needed...")
-            current_temp = new_temp
-            temp_check.fan_check(current_temp)
+            my_tank.current_temp = my_tank.new_temp
+            my_tank.fan_check(my_tank.current_temp)
         time.sleep(120)
 
-main()
 
